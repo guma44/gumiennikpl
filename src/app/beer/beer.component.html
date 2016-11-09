@@ -1,0 +1,78 @@
+<md-card class="beer">
+    <md-card-title-group (click)="onSelect(beer)">
+       <!-- <img md-card-sm-image src="../../assets/img/beer_badge.jpg"> -->
+       <md-card-title><span class="batch-id">{{ beer.batch_id }}.</span> <span class="name">{{ beer.name }}</span>
+           <span [class.status-finished]='beer.status === "FINISHED"' [class.status-other]='beer.status !== "FINISHED"'>
+               {{ beer.status }}
+           </span>
+       </md-card-title>
+       <md-card-subtitle> {{ beer.style }} </md-card-subtitle>
+    </md-card-title-group>
+    <md-card-content *ngIf="selected"  [@beerDetailsAnimation]="selected">
+          <md-tab-group>
+            <md-tab>
+              <template md-tab-label class="tab-label">
+                Ingredients
+              </template>
+              <template md-tab-content>
+                <div layout="row">
+                    <div flex="50">
+                        <p><span class="list-title">Fermentables:</span></p>
+                        <ul class="list-content">
+                            <li *ngFor="let fermentable of beer.fermentables">
+                                {{ fermentable }}
+                            </li>
+                        </ul>
+                    </div>
+                    <div flex="50">
+                        <p><span class="list-title">Hops:</span></p>
+                        <ul class="list-content">
+                            <li *ngFor="let hop of beer.boil_hops">
+                                {{ hop }}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div layout="row">
+                    <p><span class="list-title">Yeast: </span> <span class="yeast">{{ beer.yeast }}</span></p>
+                </div>
+              </template>
+            </md-tab>
+            <md-tab>
+              <template md-tab-label>
+                Parameters
+              </template>
+              <template md-tab-content>
+                  <table class="table table-hover">
+                         <tbody>
+                             <tr *ngIf='beer.abv !== -1'>
+                                 <td class="parameter-name">Alkohol:</td>
+                                 <td class="parameter-value">{{ beer.abv }}%</td>
+                             </tr>
+                             <tr>
+                                 <td class="parameter-name">Gravity:</td>
+                                 <td class="parameter-value">{{ beer.original_gravity_blg }} BLG</td>
+                             </tr>
+                             <tr>
+                                 <td class="parameter-name">Bitternes:</td>
+                                 <td class="parameter-value">{{ beer.ibu }} IBU</td>
+                             </tr>
+                             <tr>
+                                 <td class="parameter-name">Colour:</td>
+                                 <td class="parameter-value">{{ beer.srm }} SRM</td>
+                             </tr>
+                            <tr>
+                              <td class="parameter-name">Brewday:</td>
+                              <td class="parameter-value">{{ beer.fermentation_start_date }}</td>
+                            </tr>
+                            <tr *ngIf='beer.priming !== "---"'>
+                              <td class="parameter-name">Bottling day:</td>
+                              <td class="parameter-value">{{ beer.priming }}</td>
+                            </tr>
+                        </tbody>
+                  </table>
+              </template>
+            </md-tab>
+          </md-tab-group>
+    </md-card-content>
+</md-card>

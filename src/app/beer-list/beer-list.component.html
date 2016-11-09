@@ -1,0 +1,10 @@
+<md-card id="batches">
+    <md-card-title id="title">BEERS</md-card-title>
+    <md-card-content>
+        <ul>
+            <li *ngFor="let beer of beers">
+                <app-beer [beer]="beer"></app-beer>
+            </li>
+        </ul>
+    </md-card-content>
+</md-card>

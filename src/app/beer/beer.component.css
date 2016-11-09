@@ -1,0 +1,104 @@
+.beer {
+    margin-bottom: 5px;
+}
+
+md-card-content {
+    margin-top: 5px;
+}
+
+md-card-title-group {
+    padding: 5px;
+    background-color: #e6e6e6;
+    border: 3px solid #c1c1c1;
+    border-radius: 10px;
+    font-family: 'Exo', sans-serif;
+}
+
+md-card-title-group:hover {
+    cursor: pointer;
+    font-family: 'Exo', sans-serif;
+}
+
+md-card-subtitle {
+    font-family: 'Exo', sans-serif;
+}
+
+.tab-label:focus {
+    background-color: rgba(224, 204, 107, 0.51);
+}
+
+
+.name {
+    padding-right: 10px;
+    padding-left: 10px;
+    font-weight: bold;
+    font-family: 'Exo', sans-serif;
+}
+
+.batch-id {
+    color: #9a9a9a;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Exo', sans-serif;
+}
+
+.status-finished {
+    background-color: #6aad37;
+    padding: 2px;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Exo', sans-serif;
+}
+
+.status-other {
+    background-color: #5686dc;
+    padding: 2px;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Exo', sans-serif;
+}
+
+.list-title {
+    background-color: #e8e8e8;
+    padding: 5px;
+    color: #4a4a4a;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: 'Exo', sans-serif;
+}
+
+.list-content {
+    border: 2px solid #e6e6e6;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    list-style: none;
+}
+.list-content li {
+    padding-bottom: 3px;
+    color: #3c3c3c;
+    font-weight: bold;
+}
+
+.yeast {
+    margin-left: 10px;
+    color: #5686dc;
+    font-weight: bold;
+}
+
+table {
+    margin-top: 10px;
+}
+
+.parameter-name {
+    font-weight: bold;
+    color: #4a4a4a;
+}
+
+.parameter-value {
+    padding-left: 10px;
+}

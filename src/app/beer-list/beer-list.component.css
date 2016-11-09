@@ -1,0 +1,41 @@
+#batches {
+    background: #9cbfda;
+}
+
+#title {
+    font-family: 'Montserrat', sans-serif;
+    color: #4a4a4a;
+    -webkit-box-shadow: 2px 3px 9px 0px rgba(138,138,138,1);
+    -moz-box-shadow: 2px 3px 9px 0px rgba(138,138,138,1);
+    box-shadow: 2px 3px 9px 0px rgba(138,138,138,1);
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+@media only screen and (max-width: 468px) {
+    #title {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+}
+
+@media screen and (min-width: 467px) {
+    #title {
+        font-weight: bold;
+        font-size: 60px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #title {
+        font-weight: bold;
+        font-size: 80px;
+    }
+}

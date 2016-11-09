@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/core/theming/prebuilt/indigo-pink.css';
+@import 'https://fonts.googleapis.com/css?family=Exo:300,300i,400,600,600i,800,900';
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #9cbfda;
+    font-family: 'Exo', sans-serif;
+}
+
+.loading {
+  font-size: 30px;
+  color: #ffbe00;
+  font-weight: bold;
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: show;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
